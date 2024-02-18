@@ -7,22 +7,22 @@ using TMPro;
 
 public class StartScreenManager : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-    public string[] newTexts;
+    public TextMeshProUGUI uiImena;
+    public string[] listaImena;
     public float brzinaPromene = 3f;
 
     private int trenutnaPorukaID = 0;
 
     void Start()
     {
-        InvokeRepeating("ChangeText", 0f, brzinaPromene);
+        InvokeRepeating("PromeniTekst", 0f, brzinaPromene);
     }
 
-    void ChangeText()
+    void PromeniTekst()
     {
-        textComponent.text = newTexts[trenutnaPorukaID];
+        uiImena.text = listaImena[trenutnaPorukaID];
 
-        trenutnaPorukaID = (trenutnaPorukaID + 1) % newTexts.Length;
+        trenutnaPorukaID = (trenutnaPorukaID + 1) % listaImena.Length;
     }
 
     public void StartGame()
