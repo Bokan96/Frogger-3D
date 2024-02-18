@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class CameraPerspektiva : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.R)) {
@@ -18,7 +13,6 @@ public class CameraPerspektiva : MonoBehaviour
             }
             else
                 transform.position += Vector3.down * 4;
-
         }
     }
 }
