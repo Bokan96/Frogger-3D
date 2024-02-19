@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public int lives = 5;
     public int score = 0;
     public GameObject[] elementiKojiSeMenjaju;
+    public AudioSource uiZvuk;
 
     private bool igraPauzirana = false;
     private AudioListener[] allListeners;
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            uiZvuk.Play();
             TogglePause();
         }
     }
