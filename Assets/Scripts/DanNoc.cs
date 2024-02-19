@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class DanNoc : MonoBehaviour
 {
-    public float rotationSpeed = 1f;
-
+    public float brzinaRotacije = 1f;
     void Update()
     {
-        transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.right * brzinaRotacije * Time.deltaTime);
 
         ClampRotation();
     }

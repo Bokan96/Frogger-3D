@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI  livesText;
-    public TextMeshProUGUI  scoreText;
-    public int lives = 5;  // Set the initial number of lives here
+    public TextMeshProUGUI zivotiText;
+    public TextMeshProUGUI zabiceText;
+    public int lives = 5;
     public int score = 0;
-    public GameObject[] elementsToShowHide;
+    public GameObject[] elementiKojiSeMenjaju;
 
     private bool igraPauzirana = false;
     private AudioListener[] allListeners;
@@ -49,8 +49,7 @@ public class UIManager : MonoBehaviour
 
     void ToggleElementsVisibility()
     {
-        // Toggle the visibility of UI elements
-        foreach (GameObject element in elementsToShowHide)
+        foreach (GameObject element in elementiKojiSeMenjaju)
         {
             if (element != null)
             {
@@ -60,7 +59,6 @@ public class UIManager : MonoBehaviour
     }
     void SetListenersVolume(float volume)
     {
-        // Set the volume of all AudioListeners
         foreach (AudioListener listener in allListeners)
         {
             if (listener != null)
@@ -72,20 +70,17 @@ public class UIManager : MonoBehaviour
 
     public void UpdateLivesUI()
     {
-        livesText.text = "Ukupno Života\n";
+        zivotiText.text = "Ukupno Života\n";
         for(int i=0;i<lives;i++){
-            livesText.text += "♥";
+            zivotiText.text += "♥";
         }
-        scoreText.text = "Prevedenih Žabica: " + score;
+        zabiceText.text = "Prevedenih Žabica: " + score;
     }
 
-    // Call this method when you want to decrease lives
     public void DecreaseLives()
     {
         lives--;
         UpdateLivesUI();
-
-        // You can add additional logic here, like checking for game over conditions
     }
     public void IncreaseLives()
     {

@@ -33,7 +33,7 @@ public class PlayerColision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle") && ziv)
         {
-            HandleObstacleCollision();
+            SudarSaPreprekom();
         }
         else if (collision.gameObject.CompareTag("Finish"))
         {
@@ -45,12 +45,12 @@ public class PlayerColision : MonoBehaviour
         GetComponent<Rigidbody>().velocity = new Vector3(0f, 20f, 0f);
         animator.SetTrigger("Okret");
         zvukCilj.Play();
-        Invoke("ResetPlayerPosition", 1.5f);
+        Invoke("ResetujPoziciju", 1.5f);
         uiManager.score++;
         uiManager.UpdateLivesUI();
     }
 
-    void HandleObstacleCollision()
+    void SudarSaPreprekom()
     {
         ziv = false;
         uiManager.DecreaseLives();
@@ -64,12 +64,12 @@ public class PlayerColision : MonoBehaviour
         }
         else
         {
-            Invoke("ResetPlayerPosition", 1f);
+            Invoke("ResetujPoziciju", 1f);
         }
     }
 
 
-    void ResetPlayerPosition()
+    void ResetujPoziciju()
     {
         ziv = true;
         transform.position = pocetnaPozicija;

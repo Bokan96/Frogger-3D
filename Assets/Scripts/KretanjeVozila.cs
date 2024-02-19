@@ -12,50 +12,37 @@ public class KretanjeVozila : MonoBehaviour
 
     void Update()
     {
-        // Move the obstacle along the X-axis
-        MoveObstacle();
+        PomeriSe();
         moveSpeed = Random.Range(minSpeed, maxSpeed);
 
-        // Check if the obstacle is beyond the reset point
-        if ((startX<endX && transform.position.x > endX) || (startX>endX && transform.position.x < endX))
-        {
-            // Reset the X position
-            
-            ResetXPosition();
-            
-        }
+        if ( (startX<endX && transform.position.x > endX) || (startX>endX && transform.position.x < endX) )
+            ResetujPozicijuX();
     }
 
-    void MoveObstacle()
+    void PomeriSe()
     {
-        
-        Vector3 movement = new Vector3(1f, 0f, 0f);  
+        Vector3 pomeraj = new Vector3(1f, 0f, 0f);  
         if(startX>endX)
-            movement = new Vector3(-1f, 0f, 0f);
+            pomeraj = new Vector3(-1f, 0f, 0f);
 
-        transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
+        transform.Translate(pomeraj * moveSpeed * Time.deltaTime, Space.World);
     }
 
-    void ResetXPosition()
+    void ResetujPozicijuX()
     {
-        // Reset the X position to the specified value
-        Vector3 newPosition = new Vector3(startX, transform.position.y, transform.position.z);
-        transform.position = newPosition;
+        Vector3 novaPozicija = new Vector3(startX, transform.position.y, transform.position.z);
+        transform.position = novaPozicija;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
             other.transform.parent = transform;
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
-        {
             other.transform.parent = null;
-        }
     }
 }

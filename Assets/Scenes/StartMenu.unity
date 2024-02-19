@@ -220,10 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb7be6d1c038bb4681ad3cfeb9da9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 952523696}
-  newTexts:
-  - "Bojan Bo\u017Eovi\u0107 NRT 75-21"
-  - "Milo\u0161 Radoji\u010Di\u0107 NRT 40-21"
+  uiImena: {fileID: 952523696}
+  listaImena:
+  - "Bojan Bo\u017Eovi\u0107 NRT-75/21"
+  - "Milo\u0161 Radoji\u010Di\u0107 NRT-40/21"
   brzinaPromene: 3
 --- !u!4 &479267702
 Transform:
