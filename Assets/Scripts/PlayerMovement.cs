@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float duzinaKoraka = 2.5f;
     public float visinaSkoka = 10f;
+    public float brzinaPokreta = 0.2f;
     
     public AudioSource zvukPokret;
     public AudioSource zvukSkok;
@@ -20,13 +21,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 0.2f && PlayerColision.ziv){
-            Jump();
+        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 0.2f  && PlayerColision.ziv){
+            Skok();
         }
 
         else if ((Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.DownArrow)) && PlayerColision.ziv && spremanZaPokret)
         {
-            MovePlayer();
+            Pokret();
         }
         else if (Input.GetKeyDown(KeyCode.E) && PlayerColision.ziv && spremanZaPokret)
         {
@@ -34,11 +35,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Move the player based on the last released arrow key
-    void MovePlayer()
+    void Pokret()
     {
         toggleSpremanZaPokret();
-        Invoke("toggleSpremanZaPokret", 0.2f);
+        Invoke("toggleSpremanZaPokret", brzinaPokreta);
         Vector3 pomeraj = Vector3.zero;
         zvukPokret.Play();
 
@@ -67,9 +67,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Pokret");
     }
 
-    void Jump()
+    void Skok()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(0f, visinaSkoka, 0f);
+        if (transform.position.z < 20f)
+            GetComponent<Rigidbody>().velocity = new Vector3(0f, visinaSkoka, 0f);
+        else
+            GetComponent<Rigidbody>().velocity = new Vector3(0f, visinaSkoka/2, 0f);
         zvukSkok.Play();
         animator.SetTrigger("Skok");
     }

@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class SmoothCamera : MonoBehaviour
 {
-    public Transform target;
-    public float smoothness = 5f;
+    public Transform meta;
+    public float ostrinaPokreta = 5f;
 
     void LateUpdate()
     {
-        if (target != null)
+        if (meta != null)
         {
-            Vector3 desiredPosition = target.position;
-
-            transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothness * Time.deltaTime);
+            Vector3 zeljenaPozicija = meta.position;
+            transform.position = Vector3.Lerp(transform.position, zeljenaPozicija, ostrinaPokreta * Time.deltaTime);
         }
     }
 }
