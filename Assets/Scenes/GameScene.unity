@@ -2895,8 +2895,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.6368442, y: 2.9312434, z: 8.893565}
-  m_Center: {x: -0.25948757, y: 1.4625673, z: 0.020589352}
+  m_Size: {x: 2.6368442, y: 2.3646631, z: 8.893565}
+  m_Center: {x: -0.25948757, y: 1.1792772, z: 0.020589352}
 --- !u!114 &418869661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3642,7 +3642,6 @@ GameObject:
   - component: {fileID: 537513826}
   - component: {fileID: 537513825}
   - component: {fileID: 537513824}
-  - component: {fileID: 537513827}
   m_Layer: 5
   m_Name: Button-Exit
   m_TagString: Untagged
@@ -3764,20 +3763,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537513822}
   m_CullTransparentMesh: 1
---- !u!114 &537513827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537513822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8325388e5b82fd0488c62dd6fc2cef99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zvukHover: {fileID: 842245911}
-  zvukPressed: {fileID: 0}
 --- !u!1 &545751164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d34e8533c8de8ec45869f9144584d929, type: 3}
@@ -6218,8 +6203,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.6741579, y: 2.7743852, z: 8.892492}
-  m_Center: {x: -0.22467951, y: 1.3841382, z: 0.021125793}
+  m_Size: {x: 2.6741579, y: 2.309687, z: 8.892492}
+  m_Center: {x: -0.22467951, y: 1.1517891, z: 0.021125793}
 --- !u!114 &939564684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7964,8 +7949,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.4330406, z: 1}
-  m_Center: {x: 0, y: 0.71652055, z: 0}
+  m_Size: {x: 1.2471166, y: 2.4330406, z: 1}
+  m_Center: {x: -0.12356012, y: 0.71652055, z: 0}
 --- !u!23 &1154139659
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13026,8 +13011,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.7462347, y: 3.1376867, z: 8.80508}
-  m_Center: {x: -0.15513735, y: 1.565789, z: -0.23044133}
+  m_Size: {x: 2.7462347, y: 2.5481625, z: 8.80508}
+  m_Center: {x: -0.15513735, y: 1.2710268, z: -0.2304411}
 --- !u!114 &2052799447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13584,8 +13569,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.0430138, y: 2.9647312, z: 8.920403}
-  m_Center: {x: 0.04725455, y: 1.4793112, z: -0.17278004}
+  m_Size: {x: 3.0430138, y: 2.2166681, z: 8.920403}
+  m_Center: {x: 0.04725455, y: 1.1052797, z: -0.17278004}
 --- !u!4 &2139400438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 993432d7809c9bf489a5a96006618fef, type: 3}
