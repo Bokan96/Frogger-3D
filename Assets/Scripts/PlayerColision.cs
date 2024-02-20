@@ -54,7 +54,6 @@ public class PlayerColision : MonoBehaviour
     {
         ziv = false;
         uiManager.DecreaseLives();
-        zvukUdarac.Play();
         animator.SetTrigger("RIP");
 
         if (uiManager.lives <= 0)
@@ -64,6 +63,7 @@ public class PlayerColision : MonoBehaviour
         }
         else
         {
+            zvukUdarac.Play();
             Invoke("ResetujPoziciju", 1f);
         }
     }

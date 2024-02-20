@@ -11,7 +11,6 @@ public class UISounds : MonoBehaviour, IPointerEnterHandler, IPointerClickHandle
     public void OnPointerEnter(PointerEventData eventData)
     {
         zvukHover.Play();
-        Debug.Log("asdsa");
     }
 
     public void OnPointerClick(PointerEventData eventData)
