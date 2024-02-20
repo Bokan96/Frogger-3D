@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 0.2f && PlayerColision.ziv){
+        if (Input.GetKeyDown(KeyCode.Space) && transform.position.y < 0.2f  && PlayerColision.ziv){
             Skok();
         }
 
@@ -69,7 +69,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Skok()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(0f, visinaSkoka, 0f);
+        if (transform.position.z < 20f)
+            GetComponent<Rigidbody>().velocity = new Vector3(0f, visinaSkoka, 0f);
+        else
+            GetComponent<Rigidbody>().velocity = new Vector3(0f, visinaSkoka/2, 0f);
         zvukSkok.Play();
         animator.SetTrigger("Skok");
     }
